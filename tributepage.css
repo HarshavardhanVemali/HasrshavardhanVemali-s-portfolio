@@ -1,0 +1,38 @@
+#main{
+    width: auto; 
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 20px;
+    background-color: #ccc;
+}
+#title{
+    text-align: center;
+}
+#description{
+    text-align: center;
+}
+#img-caption{
+    text-align: center;
+}
+#img-div {
+    text-align: center;
+    border: 1px solid white;
+    background-color: white;
+}
+#img-div image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+#tribute-info.ul {
+    list-style-type: none;
+    padding: 0px;
+}
+#img-div {
+    text-align: center;
+}
+#image {
+    display: block;
+    margin: 0 auto;
+}

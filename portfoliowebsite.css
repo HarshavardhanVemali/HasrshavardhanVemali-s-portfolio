@@ -1,0 +1,375 @@
+/* General Styles */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #212021;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8f1f36;
+    z-index: 9999;
+    text-align: center;
+}
+
+#text-ud {
+    font-size: 40px;
+    margin-top: 0; /* Reset any default margins */
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vh 2vw; /* Added padding using vw and vh units */
+    height: 10vh; /* Set height of nav-bar background color */
+}
+
+.nav-title {
+    margin-right: auto;
+    font-size: 1.5em; /* Adjust font size as needed */
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #8f1f36;
+}
+
+#nav-bar li {
+    float: left;
+}
+
+#nav-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 2px 16px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    font-size: 1.2em; /* Adjust font size as needed */
+}
+
+.nav-link2 img {
+    width: 3vh; /* Set icon width as a percentage of viewport height */
+    height: 3vh; /* Set icon height as a percentage of viewport height */
+    border-radius: 50%;
+}
+
+/* Default styles for navigation links */
+.nav-link {
+    display: block;
+}
+
+.nav-link2 {
+    display: none;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+    #nav-bar ul {
+        display: none;
+    }
+
+    #nav-bar ul:last-child {
+        display: flex;
+    }
+
+    .nav-title {
+        font-size: 1.2em; /* Adjust font size as needed */
+    }
+
+    header, #nav-bar {
+        height: 5vh; /* Reduce height for smaller screens */
+    }
+
+    /* Adjust welcome image size */
+    #welcome-img img {
+        width: 80%; /* Set image width to 80% of container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Adjust welcome text size */
+    #welcome-text {
+        font-size: 1em; /* Adjust font size as needed */
+    }
+}
+
+/* Media query for larger screens (e.g., desktops) */
+@media only screen and (min-width: 769px) {
+    .nav-link {
+        display: block;
+    }
+
+    .nav-link2 {
+        display: none !important;
+    }
+}
+
+#nav-bar li a:not(.active) {
+    color: white;
+}
+
+#nav-bar li a:hover {
+    transform: translateX(10px);
+    background-color: #111;
+
+    color: white;
+}
+
+#nav-bar .active {
+    background-color: #04AA6D;
+}
+
+#welcome-section{
+    padding: 10%;
+    text-align: center;
+}
+
+
+#welcome-content {
+    display: flex;
+    align-items: center;
+}
+#welcome-img {
+    float: right;
+    margin-right: 1px;
+}
+#welcome-img img {
+  border-radius: 15%;
+  width: 300px;
+  height: auto;
+  border:3px solid #8f1f36;
+
+}
+#welcome-text {
+    color: white;
+}
+#welcome-text {
+    margin-right: 2px;
+}
+#welcome-section {
+    text-align: justify;
+    height: 50vh;
+    background-color: #140105;
+    background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-21658.jpg');
+    background-size:cover;
+}
+.certification-figure {
+    width: 22%;
+    border-width: 30%;
+    border-radius: 8px;
+    overflow: hidden;
+    scroll-behavior: auto;
+}
+
+.certification-figure img {
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+.certification-figure figcaption {
+    padding: 10px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+.certification-section {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+.certification-info {
+    overflow:scroll;
+  }
+  
+.certification-title {
+    font-weight: bold;
+  }
+  
+.certification-link {
+    color: black;
+    text-decoration: none;
+  }
+  
+.certification-link:hover {
+    color: red;
+  }
+#certification-info::-webkit-scrollbar {
+    display: none;
+}
+#certification-info {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.certification-link {
+    display: block; /* Ensures the link covers the entire container */
+}
+
+.certification-figure {
+    margin: 0; /* Removes default margin */
+}
+.container {
+    text-align: center;
+  }
+
+  .frame {
+    border: 2px solid #5c5959;
+    border-radius: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    background-color: #5c5959;
+    padding: 3px 3px; /* Adjust padding as needed */
+    transition: transform 0.3s ease; 
+  }
+  .project-tile {
+    border-radius: 5px;
+}
+.frame:hover{
+    transform: translateY(5px);
+    background-color: #8f1f36;
+    border: 2px soild #8f1f36;
+}
+.container:hover{
+    transform: translateY(10px);
+}
+#Projects {
+    background-color: white;
+    overflow-x: auto;
+}
+
+#text-ud::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4px;
+    width: 40%;
+    border-bottom: 4px solid white;
+    text-align: center;
+}
+
+.project {
+    margin-right: 20px; /* Adjust margin between projects */
+    border-radius: 10px; /* Adjust border-radius as needed */
+}
+
+.project:last-child {
+    margin-right: 0; /* Remove margin for the last project */
+}
+
+.project button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.project:hover {
+    transform: translateY(10px);
+}
+.certification-figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.certification-figure img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.certification-figure figcaption {
+    padding-top: 10px;
+    text-align: center;
+}
+
+#Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    background-color: black;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust as needed */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-info a:hover {
+    transform: translateY(10px);
+}
+
+.contact-info a img {
+    width: 30px;
+    height: 30px; 
+    margin-bottom: 5px; 
+    border-radius: 50%;
+    border-color: white;
+}
+
+.contact-info a span {
+    font-size: 18px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2px;
+    text-align: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    #nav-bar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #welcome-section {
+        height: 100vh; 
+        padding: 10% 5%; 
+    }
+
+    #welcome-img img {
+        width: 200px; 
+    }
+
+    .project-tile {
+        padding: 10px; 
+    }
+
+    footer {
+        padding: 10px;
+    }
+}

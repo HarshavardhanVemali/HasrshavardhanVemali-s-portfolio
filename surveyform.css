@@ -1,0 +1,42 @@
+body{
+    background-image: url('https://shots.codepen.io/leen624/pen/mdLjbbz-512.jpg?version=1664907060');
+    background-size:contain;
+}
+.container {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+#survey-form {
+    width: 50%; 
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 20px;
+    background-color:#566396;
+}
+#title {
+    text-align: center;
+}
+#description {
+    text-align:center;
+    font-style: italic;
+}
+
+label {
+    display: block;
+}
+input,
+select {
+    margin: 10px auto;
+    width:100%;
+}
+button{
+    margin-top: 20px ;
+    width: 100%;
+    height: 40px;
+    background-color: green;
+    cursor: pointer;
+    border-radius: 20px;
+}

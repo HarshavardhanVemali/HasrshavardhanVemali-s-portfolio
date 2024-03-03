@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfoliowebsite.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <nav id="nav-bar">
+            <h2 class="nav-title" style="color: color; padding-left: 40px; cursor: pointer;" onclick="scrollToTop();"><a href="#"><em>HarshaVardhan Vemali</em></a></h2>
+            <ul id="navbar">
+                <li><a class="nav-link" href="#About"><h3>About</h3></a></li>
+                <li><a class="nav-link" href="#Certifications"><h3>Certifications</h3></a></li>
+                <li><a class="nav-link" href="#Projects"><h3>Projects</h3></a></li>
+                <li><a class="nav-link" href="#Contact"><h3>Contact</h3></a></li>
+            </ul>
+            <ul id="navbar-1">
+                <li><a class="nav-link2" href="#About"><img src="https://e7.pngegg.com/pngimages/211/607/png-clipart-computer-icons-information-about-us-miscellaneous-logo-thumbnail.png" alt="about"></a></li>
+                <li><a class="nav-link2" href="#Certifications"><img src="https://static.vecteezy.com/system/resources/thumbnails/000/356/862/small/Education__2810_29.jpg" alt="certificate"></a></li>
+                <li><a class="nav-link2" href="#Projects"><img src="https://cdn-icons-png.flaticon.com/512/1087/1087815.png" alt="project"></a></li>
+                <li><a class="nav-link2" href="#Contact"><img src="https://cdn-icons-png.flaticon.com/512/7269/7269995.png" alt="Contact"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="welcome-section" style="border:2px solid black;">
+        <div id="welcome-img">
+            <img src="Photos-001/DSC_0556.JPG" alt="images">
+        </div>
+        <div id="welcome-text">
+            <h1 style="color: white; font-size: 70px;"></h1>
+            <h2 style="color: whitesmoke; font-size: 50px;"></h2>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the current URL hash
+            const currentHash = window.location.hash;
+
+            // If the current URL hash matches any option in the select dropdown
+            const selectOption = document.querySelector(`#nav-select option[value='${currentHash}']`);
+            if (selectOption) {
+                // Set the selected attribute to true for the matching option
+                selectOption.selected = true;
+            }
+
+            // Add an event listener to the select dropdown to handle navigation
+            const navSelect = document.getElementById('nav-select');
+            navSelect.addEventListener('change', function() {
+                // Navigate to the selected option's value
+                window.location.href = this.value;
+            });
+        });
+    </script>
+
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+        function animateText(element, text, delay) {
+            setTimeout(function() {
+                element.textContent = '...';
+                setTimeout(function() {
+                    element.textContent = '';
+                    let index = 0;
+                    const interval = setInterval(function() {
+                        if (index < text.length) {
+                            element.textContent += text[index];
+                            index++;
+                        } else {
+                            clearInterval(interval);
+                        }
+                    }, 100);
+                }, 1000);
+            }, delay);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const titles = document.querySelectorAll('h2, h3');
+            titles.forEach(title => {
+                const text = title.textContent;
+                title.textContent = '';
+                let index = 0;
+                const interval = setInterval(function() {
+                    if (index < text.length) {
+                        title.textContent += text[index];
+                        index++;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 100);
+            });
+            const h1 = document.querySelector('#welcome-section h1');
+            const h2 = document.querySelector('#welcome-section h2');
+            animateText(h1, 'Hey I am HarshaVardhan', 0);
+            animateText(h2, 'A Front-End developer....', 2000);
+        });
+    </script>
+    <section style="border-bottom: 25px solid #8c162f;padding-top: 0px;"></section>
+<section id="Certifications" style="background-color: #696969;">
+    <h3 style="font-size: 40px; border:2px solid black; border-radius: 3px; color: white; background-color: #333; text-align: center;">
+        Certifications
+    </h3 >
+        <div id="certification-info" style="width: 100%; display: flex; flex-wrap: nowrap; overflow-x: auto; padding: 20px; scrollbar-width: none; -ms-overflow-style: none;">
+            <!-- Certificate 1 -->
+            <div class="certificate" style="flex: 0 0 auto; width: 30%; display: flex; flex-direction: column; align-items: center; margin-right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden; background: #fff;">
+                <a class="certification-link" href="https://www.udemy.com/certificate/UC-d6fc1341-001b-4ee2-9748-c022dca7bd65/" target="_blank">
+                    <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-d6fc1341-001b-4ee2-9748-c022dca7bd65.jpg?v=1709186702000" alt="Udemy Certificate" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 10px; text-align: center;">HTML, CSS, & JS</div>
+                </a>
+            </div>
+           <!-- Certificate 2 -->
+            <div class="certificate" style="flex: 0 0 auto; width: 30%; display: flex; flex-direction: column; align-items: center; margin-right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden; background: #fff;">
+                <a class="certification-link" href="https://www.udemy.com/certificate/UC-fe3bf062-1750-4735-8da8-0d265e70407a/" target="_blank">
+                        <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-fe3bf062-1750-4735-8da8-0d265e70407a.jpg?v=1709346360000" alt="udemy-certificate" style="width: 100%; height: auto; display: block;">
+                        <div style="padding: 10px; text-align: center;">HTML, CSS, & JS</div>
+                </a>
+            </div>
+            <div class="certificate" style="flex: 0 0 auto; width: 30%; display: flex; flex-direction: column; align-items: center; margin-right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden; background: #fff;">
+                <a class="certification-link" href="https://www.credly.com/badges/173799c0-32f8-43c4-9d8d-06aa260590cf/linked_in_profile" target="_blank">
+                        <img src="Photos-001/Screenshot 2024-03-02 at 3.25.53 PM.png" alt="udemy-certificate" style="width: 100%; height: 90%; display: block;">
+                        <div style="padding: 10px; text-align: center;">PYTHON ESSENTIAL-1</div>
+                </a>
+            </div>
+            <div id="certificates1" style="flex: 0 0 auto; width: 30%; display: flex; flex-direction: column; align-items: center; margin-right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow:scroll; background: #fff;">
+                <a class="certification-link" href="https://www.credly.com/badges/07b8ccb0-6c80-48d5-ae05-8d0211e48477/linked_in_profile" target="_blank">
+                        <img class="certification-figure" style="width: 100%; height: 90%; display: block;"src="Photos-001/Screenshot 2024-03-02 at 3.26.33 PM.png" alt="udemy-certificate" style="width: 30%; height: auto; display: block;">
+                        <div style="padding: 10px; text-align: center;">PYTHON ESSENTIAL-2</div>
+                </a>
+            </div>
+            <div id="certificates1" style="flex: 0 0 auto; width: 30%; display: flex; flex-direction: column; align-items: center; margin-right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow: scroll; background: #fff;">
+                <a class="certification-link" href="https://www.hackerrank.com/certificates/ac5af25b2263" target="_blank">
+                    <img class="certification-figure" style="width: 100%; height: 90%; display: block;" style="width: 100%;" src="Photos-001/Screenshot 2024-03-02 at 3.26.18 PM.png" alt="udemy-certificate" >
+                    <div style="padding: 10px; text-align: center;">JAVA</div>
+                </a>
+            </div>
+            <div id="certificates1" style="flex: 0 0 auto; width: 30%; display: flex; flex-direction: column; align-items: center; margin-right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow: scroll; background: #fff;">
+                <a class="certification-link" href="https://www.hackerrank.com/certificates/780165c5587d" target="_blank">
+                    <img class="certification-figure" style="width: 100%; height: 90%; display: block;" style="width: 100%;" src="Photos-001/Screenshot 2024-03-02 at 3.43.23 PM.png" alt="udemy-certificate" >
+                    <div style="padding: 10px; text-align: center;">PYTHON</div>
+                </a>
+            </div>
+            <div id="certificates1" style="flex: 0 0 ; width: 30%; display: flex; flex-direction: column; align-items: center; margin-right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow: scroll; background: #fff;">
+                <a class="certification-link" href="https://youaccel.com/admin/index.php?nav=mycertificate&certnum=28754828" target="_blank">
+                        <img class="certification-figure" style="width: 100%; height: 50%; display: block;" src="https://lh3.googleusercontent.com/pw/AP1GczNj2O6R2n906FazpeluRQ5XsRcwELmj4v1xIEMBDHQNOVfcPSvbZnNMMNSmo0L481NswiWtTHZoIAqxCC2jC9l4nkTohpTTXmp6S0z06OciwEcEWNG9HHNSITDyfjgWzf-53wxVDEw_ewDNJPaGUPuIPQ5Ywx67JKxp_U5QMBsdLD9EEJzcbjw0HKGxH5jEswnlrzOUJVax-Wv4jnqX8oW690LsyE2n1sCIbvF8sAQCWXhwUWVnWxjeByR4Um_om_TgxRN6xsU5Kc9UUaEPVkW9LdA8YnVxN8H6QTWE_IX5-KqZj41Wf1pJjYxktAbdMrgTVTXKarAuTMfSkhk-WK4rB_ff-hLBtP1mVr9nigTMDtN8e06QhqAGJg9XpXH9lJJnlFBvPbveVntRUVUq_tpy_u7NeAkTSASdA36UBTgyIYwN0o1W8PMp4KBntHFM3VVDk2vyQ7D3WIbKtPp5Ok-4D7aNoKbDoR-vYa6YBprI37EzwZKDQZYwjDLPI11mdLyi3Ud2JTk9F4bYt0YJA0mXq546HMD17hIYBOdQs_lh9SmJgkPkeuE25OkB1CiXzECo2fO1F-dUg21Nv8uWSvp-THheqHERO64B4iB30DTOHtjEl7GtFbirM-9SzZwqlJlcgYR9OlftKFDiBpHqkR7AAf9uyZUkElt0VdSVQ1NGQ034FBiDx6dnrcp3viYTl2ECqGwE5Jo459ci1O9WLnsbfJ0ePTvmWi9783djgcCirutysaHz-T_SdVYJzWfDdW5ReqxaTiXYW10H9GkbPbuCUtrXMYsURC69sCtxAnDcObvrbhqkE-BPz185UFsQbSWqIz2W-es0B4vHHtvvKbsFRy9pqbyr8z3bg40cg4dbBVxP7Ueq81IiSCZGey3r6f1jKUcDFRGLcQ6HGZezg7YN=w1036-h1470-s-no-gm?authuser=0" alt="udemy-certificate" >
+                        <div style="padding: 10px; text-align: center;">HTML,CSS,&JS</div>
+                </a>
+            </div>
+            <div id="certificates2" style="flex: 0 0 30%; width: 30%; display: flex; flex-direction: column; align-items: center; margin-right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow: scroll; background: #fff;">
+                <a class="certification-link" href="https://www.credly.com/badges/7dfa9ee1-d8ce-459e-b95f-bf102859bf66/linked_in?t=s3vvp4" target="_blank">
+                    <img class="certification-figure" style="width: 100%; height: 90%; display: block;" src="Photos-001/Screenshot 2024-03-02 at 3.43.58 PM.png" alt="udemy-certificate">
+                    <div style="padding: 10px; text-align: center;">ALTERXY</div>
+                </a>
+            </div>            
+        </div>
+        <div id="show-all" class="container" style="padding-top: 10px;">
+            <a href="https://www.linkedin.com/in/harshavardhan-vemali-334976259/details/certifications/" class="frame" target="_blank">SHOW ALL &nbsp; &#x003E;</a>
+          </div>
+</section>
+<section id="Projects" style="background-color: #696969; overflow-x: hidden;">
+    <div class="project-tile">
+        <h3 style="font-size: 40px; border:2px solid black; border-radius: 3px; color: white; background-color: #333; text-align: center; padding: 10px;">Projects</h3>
+    </div>
+    <h2 id="text-ud" style="text-align: center; block-size: auto; font-size: 40px; position: relative;">These are some of my projects</h2>
+    <div id="survey-form-container" style="width: 100%; display: flex; flex-wrap: nowrap; overflow-x: auto; padding: 20px; max-height: 350px;">
+        <div class="project" onclick="loadSurveyForm()" style="width: 35%; flex-shrink: 0;">
+            <figure class="certification-figure">
+                <img src="https://media.istockphoto.com/id/1452586042/photo/survey.webp?b=1&s=170667a&w=0&k=20&c=jm0ODFwFoYd6cPMaxP15QoFnx14q_yjnkNzLV1ZGu8g=" alt="surveyfrom">
+                <figcaption>Survey-Form</figcaption>
+            </figure>
+        </div>
+        <div class="project" onclick="loadSurveyForm1()" style="width: 35%; flex-shrink: 0;">
+            <figure class="certification-figure">
+                <img src="Photos-001/Screenshot 2024-03-03 at 10.07.11 AM.png" alt="tribute-page">
+                <figcaption>Tribute page</figcaption>
+            </figure>
+        </div>
+        <div class="project" onclick="loadSurveyForm2()" style="width: 35%; flex-shrink: 0;">
+            <figure class="certification-figure">
+                <img src="https://media.istockphoto.com/id/1304351040/photo/files.jpg?s=612x612&w=0&k=20&c=oRbz_We6y3FXqFsJzyTPK3xVHTI6XWZD4q_4HzalceI=" alt="Technical Documentation">
+                <figcaption>Technical Documentation</figcaption>
+            </figure>
+        </div>
+        <div class="project" onclick="loadSurveyForm3()" style="width: 35%; flex-shrink: 0;">
+            <figure class="certification-figure">
+                <img src="Photos-001/Screenshot 2024-03-03 at 10.15.35 AM.png" alt="Product Landing Page">
+                <figcaption>Product Landing Page</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.project-tile button');
+    let currentIndex = 0;
+
+    function hoverEffect() {
+        // Remove 'hover' class from all buttons
+        buttons.forEach(btn => btn.classList.remove('auto-hover'));
+
+        // Add 'hover' class to the current button
+        buttons[currentIndex].classList.add('auto-hover');
+
+        // Move to the next button, loop back to the first after the last button
+        currentIndex = (currentIndex + 1) % buttons.length;
+    }
+
+    // Initial call
+    hoverEffect();
+
+    // Repeat every 2 seconds
+    setInterval(hoverEffect, 2000);
+});
+</script>
+
+<script>
+function loadSurveyForm() {
+    window.open('surveyfrom.html', '_parent');
+}
+function loadSurveyForm1() {
+    window.open('tribute-page.html', '_parent');
+}
+function loadSurveyForm2() {
+    window.open('thecnicaldocumentation.html', '_parent');
+}
+function loadSurveyForm3() {
+    window.open('product-landing-page.html', '_parent');
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const linkOrButton = document.getElementById('linkOrButton');
+    linkOrButton.addEventListener('click', loadSurveyForm);
+});
+</script>
+<section id="Contact">
+    <h3 style="font-size: 40px; color: white; text-align: center;">Contact</h3>
+    <h3 style="font-size: 30px; color: white; text-align: center;">Let's work together...</h3>
+    <div class="contact-info">
+        <a href="https://www.linkedin.com/in/harshavardhan-vemali-334976259/">
+            <img src="https://cdn-icons-png.flaticon.com/512/2673/2673871.png" alt="linked in">
+            <span>Linked-in</span>
+        </a> 
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRzCpWzlmVJgCXCWzVGZrGwCFsffrTkBzRDHqgzjnNcBNSClZPrfMDcdwdvqRPPSNQcBbJfq">
+            <img src="https://i.pinimg.com/736x/a1/84/0a/a1840a14b487ef2bee618d080221ec13.jpg" alt="Email">
+            <span>Email</span>
+        </a>
+        <a href="https://github.com/">
+            <img src="https://static-00.iconduck.com/assets.00/github-icon-2048x2048-eyd5tyuo.png" alt="Github">
+            <span>Github</span>
+        </a>
+        <a href="javascript:void(0);" onclick="initiateCall()">
+            <img src="https://img.freepik.com/premium-vector/phone-icon-logo-vector-design-template_827767-1199.jpg?size=338&ext=jpg&ga=GA1.1.1395880969.1709337600&semt=ais" alt="Call Icon">
+            <span>Call</span>
+        </a>
+    </div>
+</section>   
+    <script>
+        const phoneNumber = "+7675922209";
+        function initiateCall() {
+            // Directly initiating a call
+            window.location.href = 'tel:' + phoneNumber;
+        }
+        // If you had to add the event listener method, ensure the element's ID matches and consider the element's load state.
+    </script>
+<section style="border-bottom: 6px solid #8c162f;padding-top: 0px;"></section>
+<footer>
+    <h4>&#169 All rights reserved to <a href="https://www.linkedin.com/in/harshavardhan-vemali-334976259/">Vemali HarshaVardhan</a></h4>
+</footer>
+</body>
+</html>
